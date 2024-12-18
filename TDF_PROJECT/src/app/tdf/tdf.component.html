@@ -1,0 +1,29 @@
+<div class="container">
+    <form #survey="ngForm">
+        <div class="mb-3 mt-3">
+            <label for="email">Email</label>
+            <input class="form-control" type="text" name="email" ngModel >
+        </div>
+        <div class="mb-3">
+            <label for="password">Password</label>
+            <input class="form-control" type="password" name="password" ngModel >
+        </div>
+        <div class="mb-3">
+            <label for="gender">Gender</label>
+            <select class="form-control" name="gender" id="gender" ngModel >
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="age">Age</label>
+            <input class="form-control" type="number" name="age" ngModel >
+        </div>
+        
+    </form>
+</div>
+
+<div>
+    <p>Form Values:</p>
+    <pre>{{ survey.value | json }}</pre>
+</div>
